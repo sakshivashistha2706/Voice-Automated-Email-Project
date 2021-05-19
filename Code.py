@@ -123,3 +123,14 @@ if(response=='yes'or response=='YES'):
     time.sleep(music.duration)
     os.remove(ttsname)
     print('Message Sent')
+    
+else:
+    tts = gTTS(text="Message Not Sent", lang='en')
+    ttsname=("name.mp3")
+    tts.save(ttsname)
+    music = pyglet.media.load(ttsname, streaming = False)
+    music.play()
+    time.sleep(music.duration)
+    os.remove(ttsname)
+    print('Message Not Sent')  
+    
