@@ -29,7 +29,7 @@ try:
     text2=recognizer.recognize_google(toaddrs,language='en-US')
     text2 = text2.lower()
     text2=text2.replace(" ","")
-    print("Receiver's mail is:{}".format(text2))
+
 
 except Exception as ex:
     print(ex)    
@@ -38,6 +38,7 @@ except Exception as ex:
 for key, value in dict.items():
     text2 = text2.replace(key, value) 
     toaddrs=text2
+print("Receiver's mail is:{}".format(text2))
 
 #to input email content
 with sr.Microphone() as source:
